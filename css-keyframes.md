@@ -59,7 +59,7 @@ Neste exemplo, vamos dar o nome da animação de `trybe-test` e atribuir a dura�
       width: 100px;
     }
 
-Etabelecidas essas duas propriedades básicas da animação, estamos aptos a criar `keyframes`, que nada mais são do que as coordenadas a serem seguidas pelo nosso elemento estilizado. Faremos, então, uma animação em que o quadrado se transformará num retângulo, mantendo seus 100 pixels de altura, mas se estendendo a 300 pixels de comprimento.
+Estabelecidas essas duas propriedades básicas da animação, estamos aptos a criar `keyframes`, que nada mais são do que as coordenadas a serem seguidas pelo nosso elemento estilizado. Faremos, então, uma animação em que o quadrado se transformará num retângulo, mantendo seus 100 pixels de altura, mas se estendendo a 300 pixels de comprimento.
 
 Para tanto, devemos inserir os `keyframes` após as regras da animação (preferenciamente ao final do arquivo CSS):
 
@@ -116,7 +116,7 @@ Agora, faça o seguinte:
 
 6- Na divisória sem texto, crie um retângulo que deverá preencher 100% da largura tela ao longo de 2 segundos, simulando uma barra de carregamento;
 
-7(Bônus) - Exiba um alerta na sua página quando uma de suas animações terminar.
+7 **(Bônus)** - Exiba um alerta na sua página quando uma de suas animações terminar.
 
 ---
 
