@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css Keyframes - exercise</title>
+</head>
+
+<body>
+  <nav>
+    <ul id="main-menu-list">
+      <li id="colors">Home</li>
+      <li id="font">About</li>
+      <li id="center">Prices</li>
+      <li id="size">Rooms</li>
+      <li id="shine">Contact</li>
+    </ul>
+  </nav>
+  <div class="square"></div>
+</body>
+<style>
+  #main-menu-list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  #colors {
+    animation-name: colors;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+  }
+
+  #font {
+    animation-name: font;
+    animation-duration: 6s;
+  }
+
+  #center {
+    animation-name: center;
+    animation-duration: 4s;
+    animation-delay: 2s;
+  }
+
+  #size:hover {
+    animation-name: size;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #shine {
+    animation-name: shine;
+    animation-duration: 0.2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .square {
+    animation-name: loading-bar;
+    animation-duration: 2s;
+    background: red;
+    height: 10px;
+    width: 100px;
+  }
+
+  @keyframes colors {
+    0% {
+      color: green;
+    }
+
+    20% {
+      color: blue;
+    }
+
+    40% {
+      color: yellow;
+    }
+
+    60% {
+      color: red;
+    }
+
+    80% {
+      color: orange;
+    }
+
+    100% {
+      color: gray;
+      font-size: 50px;
+    }
+  }
+
+  @keyframes font {
+    100% {
+      text-shadow: 0 0 2px black;
+    }
+  }
+
+  @keyframes center {
+    0% {
+      margin-left: 0%;
+    }
+
+    50% {
+      margin-left: 50%;
+    }
+
+
+    100% {
+      margin-left: 0%;
+    }
+  }
+
+  @keyframes size {
+    0% {
+      font-size: 20px;
+    }
+
+    100% {
+      font-size: 60px;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes loading-bar {
+    0% {
+      width: 100px;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+</style>
+<script>
+  const home = document.getElementById('colors');
+  colors.addEventListener('animationend', function () {
+    alert('welcome to our site!');
+  });
+</script>
+</html>
