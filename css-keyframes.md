@@ -19,7 +19,8 @@ Nesta aula você aprenderá que o famigerado _Cascading Style Sheets_ é respons
 ## Você será capaz de:
 
 - Criar suas primeiras animações em ppáginas HTML;
-- Aprender os primeiros conceitos para a implementação de animações nas páginas por meio das _animation-properties_.
+- Aprender os primeiros conceitos para a implementação de animações nas páginas por meio das _animation-properties_;
+- Estipular cada movimento que sua animação realizará por meio dos estágios de animação.
 
 ---
 
@@ -29,29 +30,59 @@ Nesta aula você aprenderá que o famigerado _Cascading Style Sheets_ é respons
 
 ---
 
-# Conteúdos
+# Conteúdo
 
-Como dito acima, o nosso querido CSS também nos permite implementar animações em páginas web. Para tanto, é necessário aplicar na marcação de sua classe/id/tag a propriedade `animation`.
+Como dito acima, o nosso querido CSS também nos permite implementar animações em páginas web. Neste primeiro momento, veremos como aplicar uma animação que implicará na mudança de uma propriedade CSS.
 
-Para exemplificar isso,comecemos com a criação de um HTML qualquer com uma div vazia:
+Para tanto,comecemos com a criação de um HTML qualquer com a seguinte marcação:
 
-`<div></div>`
+    <div class="square"></div>
 
 E este seria seu CSS:
 
-    div {
+    .square {
       background: red;
       height: 100px;
       width: 100px;
     }
 
-Como você já consegue perceber, as propriedades acima demonstram na tela a criação de um quadrado vermelho, com 100 pixels de lado.
+Como você já consegue perceber, as propriedades acima permitem exibir na tela a criação de um quadrado vermelho, com 100 pixels de lado.
 
-Assim como `margin` e `border`, por exemplo, a propriedade `animation` aceita multiplos valores. Todavia, para uma melhor compreensão do assunto (e para um código de melhor manutenção e legibilidade), recomenda-se aplicar cada propriedade da animação e seu respectivo valor separadamente.
+Para iniciarmos a configuração inicial de nossa animação, é necessário implementar a propriedade `animation`, a qual permite a indicação de diversos valores, sendo os primeiros o nome da animação e a sua duração. **Estes dois valores são obrigatórios.**
 
-Para a propriedade `animation-name`, ficamos livres para definir o nome que mais nos agrada. vamos usar trybe-test e atribuir a duração de 2 segundos:
+Neste exemplo, vamos dar o nome da animação de `trybe-test` e atribuir a duração de 2 segundos:
 
-    div {
+    .square {
+      animation: trybe-test 2s;
+      background: red;
+      height: 100px;
+      width: 100px;
+    }
+
+Definidas essas duas propriedades básicas da animação, estamos aptos a criar `keyframes`, que servem para definir qual será a animação e como será seu comportamento ao longo do tempo. Faremos, então, uma animação em que o quadrado se transformará num retângulo, mantendo seus 100 pixels de altura, mas se estendendo a 300 pixels de comprimento.
+
+Para tanto, devemos inserir os `keyframes` após as regras da animação (preferenciamente ao final do arquivo CSS):
+
+    @keyframes trybe-test {
+      0% {
+        width: 100px;
+      }
+      100% {
+        width: 300px;
+      }
+    }
+
+O código acima atribuiu dois estágios da animação: o seu momento inicial e seu momento final. Seguindo as diretrizes propostas, apontamos a largura inicial em conformidade com o CSS descrito anteriormente (100px) e, em seguida, o novo valor da largura, transformando a classe "square" em um retângulo de 300px x 100px.
+
+O resultado final de nossa singela animação pode ser conferido [neste link](https://codepen.io/laurolyra/pen/NWqONaY).
+
+Algumas informações merecem destaque: a um, toda animação precisa ter implementado pelo menos dois estágios: o momento inicial (0%) e o final (100%), sendo opcionais a adição de estágios intermediários dentre desse intervalo.
+
+A dois, note que não é necessário transcrever todas as propriedades do CSS que será animado, mas somente aquelas que serão afetadas pelo `keyframe` (aqui trouxemos só a propriedade `width`).
+
+Por fim, assim como `margin` e `border`, por exemplo, a propriedade `animation` aceita muitos (muitos!) valores. Todavia, para uma melhor compreensão do assunto (e para um código de melhor manutenção e legibilidade), recomenda-se, sempre que possível, aplicar cada propriedade da animação e seu respectivo valor separadamente. Dessa forma, após uma pequena refatoração, nosso código seria o seguinte:
+
+    .square {
       animation-name: trybe-test;
       animation-duration: 2s;
       background: red;
@@ -59,23 +90,9 @@ Para a propriedade `animation-name`, ficamos livres para definir o nome que mais
       width: 100px;
     }
 
-Definidas essas duas propriedades básicas da animação, estamos aptos a criar `keyframes`, que servem para definir qual será a animação e como será seu comportamento ao longo do tempo. Neste exemplo, faremos uma animação em que o quadrado se transformará num retângulo, mantendo seus 100 pixels de altura, mas se estendendo a 300 pixels de comprimento.
-
-Para tanto, devemos inserir o seguinte código após as regras da animação (preferenciamente ao final do arquivo CSS):
-
-    @keyframes trybe-test {
-      0% {
-        width:100px;
-      }
-      100% {
-        width: 300px;
-      }
-    }
-
 Dito isso, comecemos com as duas principais propriedades para a animação: `animation-name` e `animation-duration` que, como o nome diz, definem o nome da animação a ser criada e a sua duração, respectivamente.
 
 
-O objetivo deste desafio é elaborar um conteúdo no estilo e qualidade _Trybe_ para que outras pessoas possam aprender com o tema. **Você deve produzir conteúdo para preencher 1h:30m de tempo de quem estiver estudando.**
 
 Elaborar um conteúdo no _Estilo Trybe_ significa ter as seções:
 - O que vamos aprender?
