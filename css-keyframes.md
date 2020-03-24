@@ -8,18 +8,18 @@ Aprendeu, também, que o javascript é a linguagem de programação responsável
 
 Certo também.
 
-Após algumas aulas, ficou claro que o CSS é uma poderosa ferramenta para estilização de páginas, podndo aplicar _designs_ atrativos, alterando cor de font, fundo, opacidade, altura, largura da seção e etc.
+Após algumas aulas, ficou claro que o CSS é uma poderosa ferramenta para estilização de páginas, podendo aplicar _designs_ atrativos, alterando cor de fonte, fundo, opacidade, altura, largura da seção e etc.
 
 Correto? Não totalmente.
 
-Nesta aula você aprenderá que o famigerado _Cascading Style Sheets_ é responsável por atribuir animaçoẽs à sua página HTML, tornando-a mais atrativa ainda!
+Nesta aula você aprenderá que o famigerado _Cascading Style Sheets_ é responsável por atribuir animações à sua página HTML, tornando-a mais atrativa ainda!
 
 ---
 
 ## Você será capaz de:
 
-- Criar suas primeiras animações em ppáginas HTML;
-- Aprender os primeiros conceitos para a implementação de animações nas páginas por meio das _animation-properties_;
+- Criar suas primeiras animações em páginas HTML;
+- Aprender os primeiros conceitos para a implementação de animações nas páginas por meio das _animation-properties_ e a construção de `keyframes`;
 - Estipular cada movimento que sua animação realizará por meio dos estágios de animação.
 
 ---
@@ -34,7 +34,7 @@ Animações em CSS são uma ótima ferramenta para ter uma página atraente, din
 
 Como dito acima, o nosso querido CSS também nos permite implementar animações em páginas web. Neste primeiro momento, veremos como aplicar uma animação que implicará na mudança de uma propriedade CSS.
 
-Para tanto,comecemos com a criação de um HTML qualquer com a seguinte marcação:
+Para tanto, comecemos com a criação de um HTML qualquer com a seguinte marcação:
 
     <div class="square"></div>
 
@@ -78,7 +78,7 @@ O resultado final pode ser conferido [neste link](https://codepen.io/laurolyra/p
 
 Algumas informações merecem destaque: a um, a animação passou por dois estágios: o momento inicial (0%) e o final (100%) - sendo este o único obrigatório na implementação de uma animação. É perfeitamente possível a adição de estágios intermediários dentre esse intervalo.
 
-A dois, note que não é necessário transcrever todas as propriedades do CSS que será animado, mas somente aquelas que serão afetadas pelo `keyframe` (aqui trouxemos só a propriedade `width`). É possível, inclusive, atribuir novas propriedades da mesma forma que você faria com um CSS inanimado.
+A dois, note que não é necessário transcrever todas as propriedades do CSS que será animado, mas somente aquelas que serão afetadas pelo `keyframe` (aqui trouxemos só a propriedade `width`). É possível, inclusive, atribuir novas propriedades da mesma forma que você faria com um CSS inanimado (mas lembre-se que essas novas propriedades somente serão aplicadas durante a animação!).
 
 Por fim, assim como `margin` e `border`, por exemplo, a propriedade `animation` aceita muitos (muitos!) valores. Todavia, visando uma melhor compreensão do assunto (e para um código de melhor manutenção e legibilidade), recomenda-se, sempre que possível, aplicar cada propriedade da animação e seu respectivo valor separadamente. Dessa forma, após uma pequena refatoração, nosso código seria o seguinte:
 
@@ -91,7 +91,7 @@ Por fim, assim como `margin` e `border`, por exemplo, a propriedade `animation` 
     }
 Sabendo disso, que tal experimentarmos um pouco? abra o editor do nosso código e altere a animação como você quiser! teste uma mudança de cores, teste novas instruções intermediárias, aplique novas propriedades ao longo do tempo, enfim, fique à vontade! Mas volte aqui porque ainda tem conteudo e exercício pra fazer, viu?
 
-Agora que você aprendeu as duas principais propriedades para a animação - `animation-name` e `animation-duration` - saiba que existem muitas outras, tais como `animation-fill-mode` (que determina quais estilos de animação estarão visíveis), `animation-direction` (que detemrina se a animação será executada em seu sentido normal, ao contrário ou alternada), `animation-iteration-count` (que especifica o número de vezes que a animação será executada), `animation-delay` (que aponta em quanto tempo a animação iniciará), dentre várias outras.
+Agora que você aprendeu as duas principais propriedades para a animação - `animation-name` e `animation-duration` - saiba que existem muitas outras, tais como `animation-fill-mode` (que determina quais estilos de animação estarão visíveis), `animation-direction` (que determina se a animação será executada em seu sentido normal, ao contrário ou alternada), `animation-iteration-count` (que especifica o número de vezes que a animação será executada), `animation-delay` (que aponta em quanto tempo a animação iniciará) e etc.
 
 Em apertadísismo resumo: tenha em mente que a animação nada mais é do que uma propriedade do CSS, podendo ser manipulada como todas as outras (inclusive via javaScript!) - diferindo somente pelos `keyframes` inseridos ao final do arquivo.
 
@@ -114,7 +114,7 @@ Agora, faça o seguinte:
 
 5- Tenha um item que apareça e desapareça da tela infinitamente e de forma bem rápida. A transição entre aparecer e desaparecer deverá ser gradual;
 
-6- Na divisória sem texto, crie um retângulo que deverá preencher 100% da largura tela ao longo de 2 segundos, simulando uma barra de carregamento;
+6- Na divisória sem texto, crie um retângulo colorido que deverá preencher 100% da largura tela ao longo de 2 segundos, simulando uma barra de carregamento;
 
 7 **(Bônus)** - Exiba um alerta na sua página quando uma de suas animações terminar.
 
