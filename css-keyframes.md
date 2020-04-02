@@ -122,6 +122,6 @@ Agora, faça o seguinte:
 
 ## Recursos adicionais
 
-- [CSS animation for beginners](https://thoughtbot.com/blog/css-animation-for-beginners);
-- [Codex CSS animations por Origamid](https://www.origamid.com/codex/css-animation/);
-- [CSS animations por W3Schools](https://www.w3schools.com/css/css3_animations.asp);
+- <a href="https://thoughtbot.com/blog/css-animation-for-beginners" target="_blank">CSS animation for beginners</a>;
+- <a href="https://www.origamid.com/codex/css-animation/" target="_blank">Codex CSS animations por Origamid</a>;
+- <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS animations por W3Schools</a>.
