@@ -74,7 +74,7 @@ Para tanto, devemos inserir os `keyframes` após as regras da animação (prefer
 
 O código acima atribuiu dois estágios da animação: o seu momento inicial e seu momento final. Seguindo as diretrizes propostas, apontamos a largura inicial em conformidade com o CSS descrito anteriormente (100px) e, em seguida, o novo valor da largura, transformando a classe "square" em um retângulo de 300px x 100px.
 
-O resultado final pode ser conferido [neste link](https://codepen.io/laurolyra/pen/NWqONaY).
+O resultado final pode ser conferido <a href="https://codepen.io/laurolyra/pen/NWqONaY" target="_blank">neste link</a>.
 
 Algumas informações merecem destaque: a um, a animação passou por dois estágios: o momento inicial (0%) e o final (100%) - sendo este o único obrigatório na implementação de uma animação. É perfeitamente possível a adição de estágios intermediários dentre esse intervalo.
 
